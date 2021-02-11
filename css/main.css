@@ -1,0 +1,48 @@
+[class*="col-"]{
+    background-color: #f5c3cb;
+    border: 1px solid black;
+    min-height: 100px;
+}
+
+/* intestazione HEADER*/
+
+header{
+    min-height: 100px;
+}
+div.link-logo{
+    position: relative;
+}
+img.image-logo{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+/* PRIMA SESSIONETITOLO ISCRIZIONE IMMAGINE BLUE*/
+
+section.section-blue{
+    min-height: 400px;
+    background-color: #1950f5;
+}
+
+
+
+
+
+/* SECONDA SESSIONE PARTENERS */
+
+section.section-partners-gray{
+    min-height: 200px;
+    background-color: #f3f5f9;
+}
