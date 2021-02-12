@@ -7,25 +7,118 @@
 /* intestazione HEADER*/
 
 header{
-    min-height: 100px;
+    height: 100px;
 }
+
+/*
 div.link-logo{
     position: relative;
     height: 100px;
 }
+ position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%); QUINDI PER FAR FUNZIONARE IL TRASLATE Y
+                            DEVO AVERE IL CONTENITORE PADRE ALTO QUANTO
+                            IL CONTENITORE FIGLIO
+*/
+
 img.image-logo{
-    position: absolute;
+    /* vertical-align: middle; */
     height: auto;
     width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    /* line-height: 100px; */
 }
 
+ul.link-menu-left, ul.link-menu-right{
+    list-style-type: none;
+    display: inline-block;
+}
 
+ul.link-menu-left li, ul.link-menu-right li{
+    display: inline-block;
+    line-height: 100px;
+    margin-left: 20px;
+    color: black;
+    text-decoration: none;
+}
+ul.link-menu-left li:first-child{
+    margin-left: 0;
+}
+ul.link-menu-left li a, ul.link-menu-right li a{
+    color: black;
+    text-decoration: none;
+}
+ul.link-menu-right li a.buttom:last-child{
+    color:#4a88f7;
+}
 
+div.text-right{
+    position: relative;
+}
+ul.link-menu-right{
+    position: absolute;
+    right: 0;
+}
 
+i.fas.fa-chevron-down{
+    font-size: 10px;
+}
 
+li a.buttom{
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #4a88f7;
+    padding: 10px 15px;
+}
+
+/* regole hamburger */
+
+div.link-menu-hamburger{
+    display: inline-block;
+    display: none;
+}
+
+@media all and (max-width:767px) {
+
+/* ______FORMATO DEL MOBILE_____ */
+
+ul.link-menu-left li a, ul.link-menu-right li a{
+    display: none;
+}
+div.link-menu-hamburger{
+    display: inline-block;
+    display: block;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+}
+div.link-menu-hamburger:hover{
+    color:#4a88f7;
+}
+
+}
+
+/* ________FORMATO TABLET, "MD" VA A DEFINIRE COME CLASSE
+LA LARGHEZZA DEL TABLET_________ */
+
+@media all and (min-width:768px) and (max-width:991px) {
+
+    ul.link-menu-left li a, ul.link-menu-right li a{
+        display: none;
+    }
+    div.link-menu-hamburger{
+        display: inline-block;
+        display: block;
+        position: absolute;
+        right: 0;
+        vertical-align: middle;
+    }
+    div.link-menu-hamburger:hover{
+        color:#4a88f7;
+    }
+
+    }
 
 
 
