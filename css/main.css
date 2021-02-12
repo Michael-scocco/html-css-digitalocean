@@ -172,7 +172,7 @@ div.container-deploy{
     border: 1px solid black;
     padding: 35px 0;
 }
-input.insert{
+input.insert, button.insert{
     width: 100%;
     padding: 10px 4px;
     border-radius: 4px;
@@ -186,8 +186,17 @@ div.container-deploy>h2{
 div.container-deploy>h2>span{
     color:#2a6df6;
 }
-
-
+.image-button{
+    position: relative;
+}
+.image-button::before{
+    content: "";
+    height: 50px;
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    left: 0;
+}
 
 
 
