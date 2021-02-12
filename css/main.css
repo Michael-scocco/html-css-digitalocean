@@ -5,36 +5,40 @@
 }
 
 /* intestazione HEADER*/
+body{
+    margin-top: 100px;
+}
 
 header{
     height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100px;
 }
-
-/*
+/* regole logo */
 div.link-logo{
     position: relative;
     height: 100px;
 }
- position: absolute;
-top: 50%;
-left: 0;
-transform: translateY(-50%); QUINDI PER FAR FUNZIONARE IL TRASLATE Y
-                            DEVO AVERE IL CONTENITORE PADRE ALTO QUANTO
-                            IL CONTENITORE FIGLIO
-*/
-
+/*QUINDI PER FAR FUNZIONARE IL TRASLATE Y
+DEVO AVERE IL CONTENITORE PADRE ALTO QUANTO
+IL CONTENITORE FIGLIO*/
 img.image-logo{
-    /* vertical-align: middle; */
+    position: absolute;
     height: auto;
     width: 100%;
-    /* line-height: 100px; */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
+/* regole limk */
 ul.link-menu-left, ul.link-menu-right{
     list-style-type: none;
     display: inline-block;
 }
-
 ul.link-menu-left li, ul.link-menu-right li{
     display: inline-block;
     line-height: 100px;
@@ -52,19 +56,22 @@ ul.link-menu-left li a, ul.link-menu-right li a{
 ul.link-menu-right li a.buttom:last-child{
     color:#4a88f7;
 }
-
+/* regole spostamento link destra */
 div.text-right{
     position: relative;
+    height: 100px;
 }
 ul.link-menu-right{
     position: absolute;
     right: 0;
 }
 
+/* regole grandezza simbolo femminile */
 i.fas.fa-chevron-down{
     font-size: 10px;
 }
 
+/* regole buttom */
 li a.buttom{
     line-height: 30px;
     border-radius: 5px;
@@ -72,8 +79,17 @@ li a.buttom{
     padding: 10px 15px;
 }
 
-/* regole hamburger */
+/* regole hover menu */
+ul.link-menu-left li a:hover, ul.link-menu-right li a:hover{
+    color: #4a88f7;
+}
+ul.link-menu-right li a.buttom:hover{
+    background-color: #4a88f7;
+    color: black;
+    text-decoration: underline;
+}
 
+/* regole hamburger */
 div.link-menu-hamburger{
     display: inline-block;
     display: none;
@@ -81,7 +97,7 @@ div.link-menu-hamburger{
 
 @media all and (max-width:767px) {
 
-/* ______FORMATO DEL MOBILE_____ */
+/* ______FORMATO DEL MOBILE HEADER_____ */
 
 ul.link-menu-left li a, ul.link-menu-right li a{
     display: none;
@@ -91,7 +107,9 @@ div.link-menu-hamburger{
     display: block;
     position: absolute;
     right: 0;
-    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
 }
 div.link-menu-hamburger:hover{
     color:#4a88f7;
@@ -99,10 +117,9 @@ div.link-menu-hamburger:hover{
 
 }
 
-/* ________FORMATO TABLET, "MD" VA A DEFINIRE COME CLASSE
-LA LARGHEZZA DEL TABLET_________ */
-
 @media all and (min-width:768px) and (max-width:991px) {
+
+    /* ________FORMATO TABLET HEADER_______ */
 
     ul.link-menu-left li a, ul.link-menu-right li a{
         display: none;
@@ -112,7 +129,9 @@ LA LARGHEZZA DEL TABLET_________ */
         display: block;
         position: absolute;
         right: 0;
-        vertical-align: middle;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
     }
     div.link-menu-hamburger:hover{
         color:#4a88f7;
@@ -120,14 +139,52 @@ LA LARGHEZZA DEL TABLET_________ */
 
     }
 
-
-
-
 /* PRIMA SESSIONETITOLO ISCRIZIONE IMMAGINE BLUE*/
-
 section.section-blue{
     min-height: 400px;
-    background-color: #1950f5;
+    /* background-color: #1950f5; */
+    background-image: url(../img/jumbo.svg);
+}
+/* regole titolo */
+div.title-blue{
+    width: 100%;
+}
+div.title-blue>h1{
+    font-size: 50px;
+    padding: 50px 0 10px 0;
+    width: 86%;
+    color: white;
+}
+div.title-blue>p{
+    font-size: 22px;
+    line-height: 1.3em;
+    color: #becdfa;
+}
+
+/* regole account */
+div.deploy-started-blue{
+    background-color: white;
+    width: 60%;
+    margin: 50px 0;
+}
+div.container-deploy{
+    margin: 20px 10px;
+    border: 1px solid black;
+    padding: 35px 0;
+}
+input.insert{
+    width: 100%;
+    padding: 10px 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+div.container-deploy>h2{
+    margin-bottom: 10px;
+    text-align:center;
+}
+div.container-deploy>h2>span{
+    color:#2a6df6;
 }
 
 
