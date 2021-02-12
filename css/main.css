@@ -11,6 +11,7 @@ header{
 }
 div.link-logo{
     position: relative;
+    height: 100px;
 }
 img.image-logo{
     position: absolute;
@@ -42,7 +43,39 @@ section.section-blue{
 
 /* SECONDA SESSIONE PARTENERS */
 
-section.section-partners-gray{
+section.section-partners-gray, section.section-designed-gray, section.section-digital{
     min-height: 200px;
     background-color: #f3f5f9;
+}
+
+
+/* _______INIZIO SESSIONE CONFIGURATION_______ */
+section.section-configuration-white, section.section-feature{
+    min-height: 500px;
+
+}
+
+
+/* INIZIO SESSIONE DESIGNED */
+
+
+/* INIZIO SESSIONE FEATURE */
+
+
+/* INIZIO SESSIONE 12 REGIONS */
+section.section-12regions-gradation, section.section-started{
+    background-image: linear-gradient(to top, #062595, #0e36a7, #1949bd );
+    min-height: 300px;
+}
+
+/* INIZIO SESSIONE DIGITAL */
+
+/* INIZIO SESSIONE STARTED */
+
+
+/* INIZIO REGOLE FOOTER */
+
+footer{
+    background-color: #091d4b;
+    min-height: 300px;
 }
