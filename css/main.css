@@ -6,7 +6,7 @@
 
 /* intestazione HEADER*/
 body{
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 header{
@@ -16,28 +16,27 @@ header{
     right: 0;
     left: 0;
     z-index: 100px;
+    background-color: white;
 }
 /* regole logo */
 div.link-logo{
-    position: relative;
     height: 100px;
+    line-height: 100px;
 }
 /*QUINDI PER FAR FUNZIONARE IL TRASLATE Y
 DEVO AVERE IL CONTENITORE PADRE ALTO QUANTO
 IL CONTENITORE FIGLIO*/
 img.image-logo{
-    position: absolute;
     height: auto;
     width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    vertical-align: middle;
 }
 
 /* regole limk */
 ul.link-menu-left, ul.link-menu-right{
     list-style-type: none;
     display: inline-block;
+    float: left;
 }
 ul.link-menu-left li, ul.link-menu-right li{
     display: inline-block;
@@ -45,6 +44,9 @@ ul.link-menu-left li, ul.link-menu-right li{
     margin-left: 20px;
     color: black;
     text-decoration: none;
+}
+ul.link-menu-left li{
+    text-align: left;
 }
 ul.link-menu-left li:first-child{
     margin-left: 0;
@@ -58,12 +60,12 @@ ul.link-menu-right li a.buttom:last-child{
 }
 /* regole spostamento link destra */
 div.text-right{
-    position: relative;
     height: 100px;
+    text-align: right;
+    line-height: 100px;
 }
 ul.link-menu-right{
-    position: absolute;
-    right: 0;
+    float: right;
 }
 
 /* regole grandezza simbolo femminile */
@@ -93,6 +95,7 @@ ul.link-menu-right li a.buttom:hover{
 div.link-menu-hamburger{
     display: inline-block;
     display: none;
+    float: right;
 }
 
 @media all and (max-width:767px) {
@@ -103,13 +106,9 @@ ul.link-menu-left li a, ul.link-menu-right li a{
     display: none;
 }
 div.link-menu-hamburger{
-    display: inline-block;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 50px;
+    line-height: 100px;
 }
 div.link-menu-hamburger:hover{
     color:#4a88f7;
@@ -125,12 +124,8 @@ div.link-menu-hamburger:hover{
         display: none;
     }
     div.link-menu-hamburger{
-        display: inline-block;
+        line-height: 100px;
         display: block;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
         font-size: 50px;
     }
     div.link-menu-hamburger:hover{
@@ -138,10 +133,11 @@ div.link-menu-hamburger:hover{
     }
 
     }
-
-/* PRIMA SESSIONETITOLO ISCRIZIONE IMMAGINE BLUE*/
+/* ___________________________________________________________ */
+/* PRIMA SESSIONE TITOLO ISCRIZIONE IMMAGINE BLUE*/
 section.section-blue{
-    min-height: 400px;
+    padding: 50px 0;
+    /* height: 400px; */
     /* background-color: #1950f5; */
     background-image: url(../img/jumbo.svg);
 }
@@ -165,12 +161,14 @@ div.title-blue>p{
 div.deploy-started-blue{
     background-color: white;
     width: 60%;
-    margin: 50px 0;
+    margin: 48px 0;
+    border-radius: 5px;
 }
 div.container-deploy{
-    margin: 20px 10px;
-    border: 1px solid black;
-    padding: 35px 0;
+    margin: 0 10px;
+    padding: 15px 0;
+    /* debug
+    border: 1px solid black; */
 }
 input.insert, button.insert{
     width: 100%;
@@ -179,26 +177,120 @@ input.insert, button.insert{
     margin-bottom: 10px;
 }
 
-div.container-deploy>h2{
-    margin-bottom: 10px;
+div.container-deploy{
     text-align:center;
 }
-div.container-deploy>h2>span{
-    color:#2a6df6;
+div.container-deploy>h2{
+    margin-bottom: 10px;
 }
+div.container-deploy>span.started-now{
+    color:#2a6df6;
+    font-size: 25px
+}
+/* regole per EMAIL E PASSWORD */
+input.insert{
+    border: 1px solid #eeeeee;
+}
+/* regole background e scritta DI ACCOUNT */
+input.insert.blue{
+    background-color: #669af8;
+    color: white;
+    border: 1px solid #669af8;
+}
+
+/* regole per inserire immagine con before */
 .image-button{
     position: relative;
+    color:#626262;
 }
 .image-button::before{
-    content: "";
-    height: 50px;
-    width: 100%;
-    background-color: yellow;
-    position: absolute;
-    left: 0;
+    content: "";           /*questo va sempre quando faccio i psuedo codici*/
+    height: 20px;          /*vado a formare un quadrato 20x20*/
+    width: 20px;
+    background-image: url("../img/google-icon.png");
+    background-size: cover; /*altrimenti non vedo l'immagine*/
+    position: absolute;     /*la devo mettere in absolute*/
+    left: 10px;
+    bottom: 8px;
+    z-index: 100;           /*metto in z-index perchè il button ha un suo background*/
+}
+span.agree{
+    font-size: 12px;
+    display: block;
+    text-align:center;
+    color:#091d4b;
+}
+span.agree>a{
+    color:#286ef6;
 }
 
+@media all and (max-width:767px) {
 
+/* ______FORMATO DEL MOBILE TITOLO ISCRIZIONE IMMAGINE BLUE_____ */
+
+        /* TITOLO E PARAGRAFO */
+    div.title-blue>h1{
+        width: 90%;
+    }
+    div.title-blue>p{
+        line-height: 1.5em;
+        width: 100%
+    }
+
+    /* CREAZIONE ACCOUNT */
+    div.deploy-started-blue {
+    margin: 0 auto;
+    width: 80%;
+    min-height: 320px;
+    padding: 30px 15px;
+    }
+    div.container-deploy>h2 {
+    width: 58%;
+    margin: 0 auto;
+    }
+
+}
+
+@media all and (min-width:768px) and (max-width:991px) {
+
+    /* ________FORMATO TABLET TITOLO ISCRIZIONE IMMAGINE BLUE_______ */
+
+        /* TITOLO E PARAGRAFO */
+    div.title-blue>h1 {
+    width: 100%;
+    font-size: 52px;
+    padding: 14px 0 10px 0;
+    }
+    div.title-blue>p {
+    width: 95%;
+    line-height: 1.2em;
+    font-size: 31px;
+    }
+
+    /* CREAZIONE ACCOUNT */
+    div.deploy-started-blue {
+    margin: 0px auto;
+    width: 95%;
+    height: 470px;
+    padding: 15px 4px;
+    float: right;
+    }
+    div.container-deploy {
+    padding: 18% 0;
+    }
+    div.container-deploy>h2 {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    }
+    span.started-now{
+    display: block;
+    }
+    span.started-now, input.insert{
+        margin-bottom: 20px
+    }
+
+}
 
 /* SECONDA SESSIONE PARTENERS */
 
@@ -206,14 +298,195 @@ section.section-partners-gray, section.section-designed-gray, section.section-di
     min-height: 200px;
     background-color: #f3f5f9;
 }
+div.title-gray{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
 
+div.title-gray h4{
+    line-height: 100px;
+    color:#5e6b8a;
+    width: 100%;
+}
+
+div.container-partners-gray{
+    text-align:center;
+}
+ul.link-partners-gray li{
+    display: inline-block;
+    list-style-type:none;
+}
+ul.link-partners-gray li>a>img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+span.ancor-partners a{
+    color:#0063f6;
+    text-decoration: none;
+}
+
+@media all and (max-width:767px) {
+
+/* ______FORMATO DEL MOBILE SESSIONE PARTENERS_____ */
+
+    ul.link-partners-gray li {
+    border: 1px solid black;
+    vertical-align: middle;
+    height: 100px;
+    width: 40%;
+    }
+    ul.link-partners-gray li>a>img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    }
+
+
+    /* sessione configuratione */
+
+    .row div.varius-row-top-left, .row div.varius-row-bottom-left,
+    .row div.varius-row-top-right, .row div.varius-row-bottom-right {
+    border: 1px solid black;
+    float: left;
+    min-height: 100px;
+    width: 80%;
+    margin-left: 0;
+    }
+    .row div.varius-row-top-left h4, .row div.varius-row-bottom-left h4,
+    .row div.varius-row-top-right h4, .row div.varius-row-bottom-right h4{
+        font-size: 25px;
+    }
+    .row div.varius-row-top-left p, .row div.varius-row-bottom-left p,
+    .row div.varius-row-top-right p, .row div.varius-row-bottom-right p{
+        font-size: 20px;
+    }
+
+    div.varius-row-top-left>h4, div.varius-row-top-left>p,
+    div.varius-row-top-right>h4, div.varius-row-top-right>p,
+    div.varius-row-bottom-left>h4, div.varius-row-bottom-left>p,
+    div.varius-row-bottom-right>h4, div.varius-row-bottom-right>p,
+    div.configuration-varius-description>img {
+    margin-bottom: 10px;
+    }
+
+
+}
+
+@media all and (min-width:768px) and (max-width:991px) {
+
+    /* ________FORMATO TABLET SESSIONE PARTENERS_______ */
+
+    div.container-partners-gray{
+        width: 100%;
+    }
+
+    ul.link-partners-gray li{
+        margin: 0;
+    }
+
+    ul.link-partners-gray li>img{
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+
+    /* _______sessione CONFIGURATION_______ */
+    div.title-configuration p {
+    font-size: 27px;
+    width: 100%;
+    margin: 0 auto;
+    }
+    div.configuration-varius {
+    background-color: black;
+    border: 1px solid white;
+    float: left;
+    min-height: 200px;
+    width: 50%;
+    margin-bottom: 20px;
+    }
+    div.varius-row-top-left>p, div.varius-row-top-right>p,
+    div.varius-row-bottom-left>p, div.varius-row-bottom-right>p {
+    color: #6f7b94;
+    font-size: 20px;
+    }
+
+}
 
 /* _______INIZIO SESSIONE CONFIGURATION_______ */
 section.section-configuration-white, section.section-feature{
     min-height: 500px;
-
+}
+div.title-configuration{
+    text-align: center;
+}
+div.title-configuration h2{
+    font-size: 30px;
+}
+div.title-configuration p{
+    line-height: 1.5em;
+    color:#566381;
+    font-size: 20px;
+    width: 82%;
+    margin: 0 9%;
+}
+ul.link-configuration{
+    list-style: none;
+    border-left: 1px solid #8c94a7;
+}
+ul.link-configuration li{
+    margin-left: 5px;
+    margin-bottom: 25px;
+    color:#8c94a7;
 }
 
+div.configuration-varius-row-top div.configuration-varius-description,
+div.configuration-varius-row-bottom div.configuration-varius-description{
+    text-align: left;
+}
+div.varius-row-top-left,
+div.varius-row-bottom-left{
+    border: 1px solid black;
+    float: left;
+    min-height: 100px;
+    width: 49%;
+    margin-left: 0;
+}
+
+div.varius-row-top-right,
+div.varius-row-bottom-right{
+    border: 1px solid black;
+    float: right;
+    margin-left: 5px;
+    min-height: 100px;
+    width: 49%;
+}
+div.configuration-varius-description>img{
+    border: 1px solid black;
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    padding: 2px;
+}
+div.varius-row-top-left>h4,
+div.varius-row-top-left>p,
+div.varius-row-top-right>h4,
+div.varius-row-top-right>p,
+div.varius-row-bottom-left>h4,
+div.varius-row-bottom-left>p,
+div.varius-row-bottom-right>h4,
+div.varius-row-bottom-right>p,
+div.configuration-varius-description>img{
+    margin-bottom:10px;
+}
+div.varius-row-top-left>p, div.varius-row-top-right>p,
+div.varius-row-bottom-left>p, div.varius-row-bottom-right>p{
+    color: #6f7b94;
+    font-size: 15px;
+}
 
 /* INIZIO SESSIONE DESIGNED */
 
