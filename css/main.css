@@ -594,12 +594,12 @@ li.div-image-hover:hover a.hover-image{
     div.arrow-right{
         display: none;
     }
-
+}
 @media all and (min-width:768px) and (max-width:991px) {
         /* TABLET */
 
         /* _______sessione DESIGNED_______ */
-
+}
 /* INIZIO SESSIONE FEATURE */
 div.predicable,
 div.world,
@@ -720,6 +720,9 @@ div.destination-left{
 @media all and (max-width:767px) {
     /* CELLULARE */
     /* sessione 12regions */
+    div.title-12regions h2{
+        font-size: 45px;
+    }
     ul.table-count{
         column-count: 1;
     }
@@ -768,7 +771,7 @@ div.image-digital>span{
     margin-bottom: 30px
 }
 div.image-digital>a,
-i.fas.fa-angle-right{
+i.read-more{
     color: #3172f6;
     text-decoration: none;
     display: block;
@@ -839,10 +842,58 @@ h4.title-white-footer{
 li.link-colon-footer a{
     text-decoration: none;
 }
+@media all and (max-width:767px){
+    h4.title-white-footer, li.link-colon-footer a{
+        font-size: 25px;
+    }
+}
+}
 @media all and (min-width:768px) and (max-width:991px) {
     /* TABLET */
     /* sessione FOOTER*/
     div.container-logo-footer{
         margin-bottom: 10px;
     }
+    h4.title-white-footer, li.link-colon-footer a{
+        font-size: 18px;
+    }
+}
+/* ________________________ */
+
+/* regole fixed */
+
+div.chat{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    padding: 20px 10px;
+}
+div.write-ghost{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    border: white;
+    background-color: white;
+    float: left;
+    width: 77%;
+    padding: 10px 10px;
+    z-index: 10;
+    display: none;
+}
+div.figure{
+    background-image: 
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+div.write-ghost p{
+    line-height: 1.3em;
+}
+
+div.figure:hover div.write-ghost{
+    display: block;
+
 }
