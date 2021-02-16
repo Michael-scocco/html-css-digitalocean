@@ -1,7 +1,7 @@
 [class*="col-"]{
-    background-color: #f5c3cb;
+    /* background-color: #f5c3cb;
     border: 1px solid black;
-    min-height: 100px;
+    min-height: 100px; */
 }
 
 body{
@@ -74,8 +74,9 @@ ul.link-menu-right{
 }
 
 /* regole grandezza simbolo femminile */
-i.fas.fa-chevron-down{
+i.down-menu.fas.fa-chevron-down{
     font-size: 10px;
+    color: black;
 }
 
 /* regole buttom */
@@ -306,13 +307,13 @@ section.section-digital{
     background-color: #f3f5f9;
 }
 div.title-gray{
-    height: 100px;
-    line-height: 100px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
 }
 
 div.title-gray h4{
-    line-height: 100px;
+    line-height: 50px;
     color:#5e6b8a;
     width: 100%;
 }
@@ -331,7 +332,7 @@ ul.link-partners-gray li>a>img{
     vertical-align: middle;
 }
 
-span.ancor-partners a{
+span.ancor-partners a, i.partners.fas.fa-angle-right{
     color:#0063f6;
     text-decoration: none;
 }
@@ -341,7 +342,6 @@ span.ancor-partners a{
 /* ______FORMATO DEL MOBILE SESSIONE PARTENERS_____ */
 
     ul.link-partners-gray li {
-    border: 1px solid black;
     width: 40%;
     width: calc((100% / 6)-5px);
     /*per dividere in spazi uguali reattivi,
@@ -363,7 +363,6 @@ span.ancor-partners a{
     /* ________FORMATO TABLET SESSIONE PARTENERS_______ */
 
     ul.link-partners-gray li {
-    border: 1px solid black;
     width: 15%;
     width: calc((100% / 6)-5px);
 
@@ -389,13 +388,16 @@ section.section-configuration-white, section.section-feature{
 div.title-configuration{
     text-align: center;
 }
-
-div.title-configuration p{
+div.title-configuration>h2{
+    margin-bottom: 20px;
+}
+div.title-configuration>p{
     line-height: 1.5em;
     color:#566381;
     font-size: 20px;
     width: 82%;
     margin: 0 9%;
+    margin-bottom: 65px;
 }
 ul.link-configuration{
     list-style: none;
@@ -413,7 +415,6 @@ div.configuration-varius-row-bottom div.configuration-varius-description{
 }
 div.varius-row-top-left,
 div.varius-row-bottom-left{
-    border: 1px solid black;
     float: left;
     min-height: 100px;
     width: 49%;
@@ -422,14 +423,12 @@ div.varius-row-bottom-left{
 
 div.varius-row-top-right,
 div.varius-row-bottom-right{
-    border: 1px solid black;
     float: right;
     margin-left: 5px;
     min-height: 100px;
     width: 49%;
 }
 div.configuration-varius-description>img{
-    border: 1px solid black;
     width: 20%;
     height: auto;
     object-fit: cover;
@@ -460,7 +459,6 @@ div.varius-row-bottom-left>p, div.varius-row-bottom-right>p{
 
     .row div.varius-row-top-left, .row div.varius-row-bottom-left,
     .row div.varius-row-top-right, .row div.varius-row-bottom-right {
-    border: 1px solid black;
     float: left;
     min-height: 100px;
     width: 80%;
@@ -488,14 +486,16 @@ div.varius-row-bottom-left>p, div.varius-row-bottom-right>p{
     /* TABLET */
 
     /* _______sessione CONFIGURATION_______ */
-
+    div.varius-row-top-left, div.varius-row-bottom-left {
+    margin-bottom: 30px;
+    }
     div.title-configuration p {
     font-size: 27px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 30px
     }
     div.configuration-varius {
-    background-color: black;
     border: 1px solid white;
     float: left;
     min-height: 200px;
@@ -515,16 +515,21 @@ div.varius-row-bottom-left>p, div.varius-row-bottom-right>p{
 span.create-55,
 ol.change-pages,
 div.image-designed,
-div.title-designed{
+div.title-designed,
+div.title-digital{
     text-align: center;
 }
 div.title-designed>h2{
     margin-bottom: 20px;
 }
-
+div.title-designed>p{
+    margin-bottom: 50px;
+    font-size: 23px;
+}
 /* regole immagine */
 img.image-full{
     width: 100%;
+    margin-bottom: 25px;
 }
 span.create-55{
     display: block;
@@ -551,7 +556,10 @@ div.arrow-left{
 div.arrow-right{
     right: -30px;
 }
-div.arrow-left:hover, div.arrow-right:hover{
+i.change-arrow.fas.fa-angle-left, i.change-arrow.fas.fa-angle-right{
+    color: black;
+}
+i.change-arrow.fas.fa-angle-left:hover, i.change-arrow.fas.fa-angle-right:hover{
     color:#717b95;
 }
 /* regole cambia pagina */
@@ -610,23 +618,26 @@ div.reliable{
 
 div.title-feature h2{
     text-align: center;
+    margin-bottom: 50px;
 }
 div.predicable>img,
 div.world>img,
 div.reliable>img{
-    border: 1px solid black;
     width: 20%;
     height: auto;
     object-fit: cover;
     padding: 2px;
 }
-div.predicable>span a, i,
-div.world>span a, i,
-div.reliable>span a, i{
+div.predicable>span a,
+div.world>span a,
+div.reliable>span a,{
     text-decoration: none;
     color: #4a82f6;
 }
 
+i.arrow-features.fas.fa-angle-right{
+    color: #4a82f6;
+}
 .bottom-features{
     margin-bottom:10px;
 }
@@ -673,6 +684,7 @@ section.section-12regions-gradation, section.section-started{
 div.title-12regions>h2{
     color: white;
     text-align: center;
+    margin-bottom: 20px;
 }
 /* divido in due colonne */
 ul.table-count{
@@ -706,10 +718,12 @@ div.destination-left>h4{
 div.destination-left>span{
     color: #b6c3e5;
 }
-div.destination-right>a,
-i.fas{
+div.destination-right>a{
     color: #5ccbce;
     text-decoration: none;
+}
+i.12-reg.fas.fa-angle-right{
+    color: #5ccbce;
 }
 /* do il paggind per allontanare il contenuto all'esterno */
 div.destination-right,
@@ -750,12 +764,16 @@ div.destination-left{
 
 }
 /* INIZIO SESSIONE DIGITAL */
+div.title-digital>h2{
+    font-size: 36px;
+    margin-bottom: 100px;
+}
 div.container-image-digital{
     background-color: white;
     text-align: center;
 }
 div.image-digital{
-    padding: 100px 0;
+    padding: 80px 0;
 }
 div.image-digital p{
     font-size: 25px;
@@ -796,6 +814,7 @@ a.button-started{
     background-color: white;
     padding: 10px 15px;
     color:#296cf6;
+    text-decoration: none;
 }
 
 /* INIZIO REGOLE FOOTER */
@@ -803,6 +822,7 @@ a.button-started{
 footer{
     background-color: #091d4b;
     min-height: 300px;
+    padding: 50px 0;
 }
 /* regole logo e copy */
 div.container-logo-footer>img{
@@ -857,6 +877,19 @@ li.link-colon-footer a{
     h4.title-white-footer, li.link-colon-footer a{
         font-size: 18px;
     }
+    div.chat{
+        bottom: 10;
+        left: 0;
+        width: 20%;
+    }
+    div.figure {
+    float: left;
+    }
+
+    div.write-ghost {
+    float: right;
+    display: none;
+    }
 }
 /* ________________________ */
 
@@ -891,13 +924,14 @@ div.figure{
     height: 50px;
     float: right;
     position: relative;
+    bottom:15px;
 }
 
 div.write-ghost p{
     line-height: 1.3em;
 }
 
-div.figure:hover div.write-ghost{
+div.figure:hover + div.write-ghost{
     display: block;
 }
 span.number-chat{
