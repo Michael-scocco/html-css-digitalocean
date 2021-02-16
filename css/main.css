@@ -740,6 +740,33 @@ div.destination-left{
 
 }
 /* INIZIO SESSIONE DIGITAL */
+div.container-image-digital{
+    background-color: white;
+    text-align: center;
+}
+div.image-digital{
+    padding: 100px 0;
+}
+div.image-digital p{
+    font-size: 25px;
+}
+div.container-image-digital,
+div.image-digital>img,
+div.image-digital>p{
+    margin-bottom: 20px;
+}
+div.image-digital>span{
+    margin-bottom: 30px
+}
+div.image-digital>a,
+i.fas.fa-angle-right{
+    color: #3172f6;
+    text-decoration: none;
+    display: block;
+}
+div.image-digital>a i.fas.fa-angle-right:last-child{
+    display: inline-block;
+}
 
 /* INIZIO SESSIONE STARTED */
 
