@@ -523,12 +523,13 @@ div.title-designed>h2{
 }
 
 /* regole immagine */
-div.image-designed>img{
-    width: 60%;
-    height: auto;
-    object-fit: contain;
+img.image-full{
+    width: 100%;
 }
-
+span.create-55{
+    display: block;
+    margin-bottom: 10px;
+}
 /* regole posizione centrale */
 div.arrow-left, div.image-designed, div.arrow-right{
     /* float: left; */
@@ -545,21 +546,14 @@ div.arrow-left, div.arrow-right{
     transform: translateY(-50%);
 }
 div.arrow-left{
-    left: 120px;
+    left: -30px;
 }
 div.arrow-right{
-    right: 120px;
+    right: -30px;
 }
-
 div.arrow-left:hover, div.arrow-right:hover{
     color:#717b95;
 }
-span.create-55{
-    display: block;
-    margin-bottom: 10px;
-}
-
-
 /* regole cambia pagina */
 ol.change-pages{
     list-style-type: none;
@@ -589,6 +583,22 @@ li.div-image-hover:hover a.hover-image{
     display:block;
     border-radius: 50%;
 }
+@media all and (max-width:767px) {
+    /* CELLULARE */
+
+    /* _______sesisone DESIGNED_________ */
+
+    div.arrow-left{
+        display: none;
+    }
+    div.arrow-right{
+        display: none;
+    }
+
+@media all and (min-width:768px) and (max-width:991px) {
+        /* TABLET */
+
+        /* _______sessione DESIGNED_______ */
 
 /* INIZIO SESSIONE FEATURE */
 div.predicable,
@@ -766,26 +776,13 @@ i.fas.fa-angle-right{
 div.image-digital>a i.fas.fa-angle-right:last-child{
     display: inline-block;
 }
-/* regole frecce */
-div.row-position{
-    position: relative;
-}
-div.arrow-left-rocker, div.arrow-right-rocker{
-    top: 50%;
-    font-size: 40px;
-    position: absolute;
-    transform: translateY(-50%);
-}
-div.arrow-left-rocker{
-    left: -30px;
-}
-div.arrow-right-rocker{
-    right: -30px;
-}
+
 
 /* INIZIO SESSIONE STARTED */
-h2.title-started{
+.centre-started{
     text-align: center;
+}
+h2.title-started{
     color: white;
     margin-bottom: 30px;
 }
@@ -841,4 +838,11 @@ h4.title-white-footer{
 }
 li.link-colon-footer a{
     text-decoration: none;
+}
+@media all and (min-width:768px) and (max-width:991px) {
+    /* TABLET */
+    /* sessione FOOTER*/
+    div.container-logo-footer{
+        margin-bottom: 10px;
+    }
 }
