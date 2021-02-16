@@ -4,10 +4,15 @@
     min-height: 100px;
 }
 
-/* intestazione HEADER*/
 body{
     padding-top: 100px;
+
 }
+
+h2{
+    font-size: 30px;
+}
+/* intestazione HEADER*/
 
 header{
     height: 100px;
@@ -294,8 +299,10 @@ span.agree>a{
 
 /* SECONDA SESSIONE PARTENERS */
 
-section.section-partners-gray, section.section-designed-gray, section.section-digital{
-    min-height: 200px;
+section.section-partners-gray,
+section.section-designed-gray,
+section.section-digital{
+    padding: 50px 0;
     background-color: #f3f5f9;
 }
 div.title-gray{
@@ -321,6 +328,7 @@ ul.link-partners-gray li>a>img{
     width: 100%;
     height: auto;
     padding-bottom: 20px;
+    vertical-align: middle;
 }
 
 span.ancor-partners a{
@@ -334,14 +342,18 @@ span.ancor-partners a{
 
     ul.link-partners-gray li {
     border: 1px solid black;
-    vertical-align: middle;
-    height: 100px;
     width: 40%;
+    width: calc((100% / 6)-5px);
+    /*per dividere in spazi uguali reattivi,
+    devo fare il calc, imoltre dato ke sono in "inline-block"
+    tolgo un ipotetico margine del 5px, creato dalla stessa
+    proprietà*/
     }
     ul.link-partners-gray li>a>img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    vertical-align: middle;
+    padding-bottom: 20px;
     }
 
 }
@@ -350,32 +362,34 @@ span.ancor-partners a{
 
     /* ________FORMATO TABLET SESSIONE PARTENERS_______ */
 
-    div.container-partners-gray{
-        width: 100%;
-    }
+    ul.link-partners-gray li {
+    border: 1px solid black;
+    width: 15%;
+    width: calc((100% / 6)-5px);
 
-    ul.link-partners-gray li{
-        margin: 0;
+    /*per dividere in spazi uguali reattivi,
+    devo fare il calc, imoltre dato ke sono in "inline-block"
+    tolgo un ipotetico margine del 5px, creato dalla stessa
+    proprietà*/
     }
 
     ul.link-partners-gray li>img{
         width: 100%;
         height: auto;
         padding-bottom: 20px;
+        vertical-align: middle;
     }
 
 }
 
 /* _______INIZIO SESSIONE CONFIGURATION_______ */
 section.section-configuration-white, section.section-feature{
-    min-height: 500px;
+    padding: 50px 0;
 }
 div.title-configuration{
     text-align: center;
 }
-div.title-configuration h2{
-    font-size: 30px;
-}
+
 div.title-configuration p{
     line-height: 1.5em;
     color:#566381;
@@ -519,6 +533,7 @@ div.container-designed{
 }
 div.arrow-left, div.image-designed, div.arrow-right{
     float: left;
+    margin-bottom: 20px;
 }
 /* regole frecce */
 div.row-position{
@@ -540,15 +555,190 @@ div.arrow-right{
 div.arrow-left:hover, div.arrow-right:hover{
     color:#717b95;
 }
-/* INIZIO SESSIONE FEATURE */
+span.create-55{
+    display: block;
+    margin-bottom: 10px;
+}
+span.create-55, ol.change-pages{
+    text-align: center;
+}
 
+/* regole cambia pagina */
+ol.change-pages{
+    list-style-type: none;
+}
+li.div-image-hover{
+    position: relative;
+    display: inline-block;
+    border: 1px solid blue;
+    border-radius: 50%;
+    /* background-size: contain; */
+    width: 15px;
+    height: 15px;
+    /* list-style-image: url(../img/Cerchio.jpg); */
+}
+/* _______creato hover_____ */
+a.hover-image{
+    position: absolute;
+    background-color: blue;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 110;
+    display: none;
+}
+li.div-image-hover:hover a.hover-image{
+    display:block;
+    border-radius: 50%;
+}
+
+/* INIZIO SESSIONE FEATURE */
+div.predicable,
+div.world,
+div.reliable{
+    float: left;
+    width: 30%;
+}
+
+div.title-feature h2{
+    text-align: center;
+}
+div.predicable>img,
+div.world>img,
+div.reliable>img{
+    border: 1px solid black;
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    padding: 2px;
+}
+div.predicable>span a, i,
+div.world>span a, i,
+div.reliable>span a, i{
+    text-decoration: none;
+    color: #4a82f6;
+}
+
+.bottom-features{
+    margin-bottom:10px;
+}
+div.varius-row-top-left>p, div.varius-row-top-right>p,
+div.varius-row-bottom-left>p, div.varius-row-bottom-right>p{
+    color: #6f7b94;
+    font-size: 15px;
+}
+
+@media all and (max-width:767px) {
+
+    /* CELLULARE */
+    /* sessione feature */
+
+    div.title-feature h2{
+        font-size: 46px;
+    }
+
+    .bottom-features{
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: 1.2em;
+    }
+    div.predicable,
+    div.world,
+    div.reliable {
+        width: 100%;
+    }
+    div.predicable>span a, i,
+    div.world>span a, i,
+    div.reliable>span a, i {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+/* ________________________________ */
 
 /* INIZIO SESSIONE 12 REGIONS */
 section.section-12regions-gradation, section.section-started{
     background-image: linear-gradient(to top, #062595, #0e36a7, #1949bd );
-    min-height: 300px;
+    padding: 50px 0;
 }
+/* regole titolo */
+div.title-12regions>h2{
+    color: white;
+    text-align: center;
+}
+/* divido in due colonne */
+ul.table-count{
+    list-style: none;
+    column-count: 2;
+}
+/* inserisco il border bottom */
+ul.table-count li{
+    border-bottom: 1px solid #f6f6fa;
+}
+/* metto in linea */
+div.destination-left h4, span{
+    display: inline-block;
+}
+/* distanzio lo span */
+div.destination-left>span{
+    margin-left: 50px;
+}
+/* metto in linea i div */
+div.destination-left, div.destination-right{
+    display: inline-block;
+}
+/* flotto a dx il div */
+div.destination-right{
+    float: right;
+}
+/* regole colore scritte */
+div.destination-left>h4{
+    color: #fefeff;
+}
+div.destination-left>span{
+    color: #b6c3e5;
+}
+div.destination-right>a,
+i.fas{
+    color: #5ccbce;
+    text-decoration: none;
+}
+/* do il paggind per allontanare il contenuto all'esterno */
+div.destination-right,
+div.destination-left{
+    padding: 10px 15px;
+}
+/* ________________________ */
+@media all and (max-width:767px) {
+    /* CELLULARE */
+    /* sessione 12regions */
+    ul.table-count{
+        column-count: 1;
+    }
+    ul.table-count li.separation{
+        margin-bottom: 40px;
+        border-bottom: none;
+    }
+    div.destination-left>h4,
+    div.destination-left>span,
+    div.destination-right>a,
+    i.fas{
+        font-size: 30px;
+    }
+}
+@media all and (min-width:768px) and (max-width:991px) {
+    /* TABLET */
+    /* sessione 12regions */
+    ul.table-count{
+        column-count: 1;
+    }
+    ul.table-count li.separation{
+        margin-bottom: 40px;
+        border-bottom: none;
+    }
 
+}
 /* INIZIO SESSIONE DIGITAL */
 
 /* INIZIO SESSIONE STARTED */
