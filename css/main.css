@@ -511,7 +511,10 @@ div.varius-row-bottom-left>p, div.varius-row-bottom-right>p{
 
 /* INIZIO SESSIONE DESIGNED */
 
-/* regole titolo testo */
+/* regole titolo testo e centratura*/
+span.create-55,
+ol.change-pages,
+div.image-designed,
 div.title-designed{
     text-align: center;
 }
@@ -521,18 +524,14 @@ div.title-designed>h2{
 
 /* regole immagine */
 div.image-designed>img{
-    width: 100%;
-    height: 50vh;
+    width: 60%;
+    height: auto;
     object-fit: contain;
 }
 
 /* regole posizione centrale */
-div.container-designed{
-    margin: 0 auto;
-    width: 80%;
-}
 div.arrow-left, div.image-designed, div.arrow-right{
-    float: left;
+    /* float: left; */
     margin-bottom: 20px;
 }
 /* regole frecce */
@@ -546,10 +545,10 @@ div.arrow-left, div.arrow-right{
     transform: translateY(-50%);
 }
 div.arrow-left{
-    left: 40px;
+    left: 120px;
 }
 div.arrow-right{
-    right: 40px;
+    right: 120px;
 }
 
 div.arrow-left:hover, div.arrow-right:hover{
@@ -559,9 +558,7 @@ span.create-55{
     display: block;
     margin-bottom: 10px;
 }
-span.create-55, ol.change-pages{
-    text-align: center;
-}
+
 
 /* regole cambia pagina */
 ol.change-pages{
@@ -750,6 +747,8 @@ div.image-digital{
 div.image-digital p{
     font-size: 25px;
 }
+/* regola per distanziare il cambio pagina
+immagine e paragrafo */
 div.container-image-digital,
 div.image-digital>img,
 div.image-digital>p{
@@ -767,13 +766,79 @@ i.fas.fa-angle-right{
 div.image-digital>a i.fas.fa-angle-right:last-child{
     display: inline-block;
 }
+/* regole frecce */
+div.row-position{
+    position: relative;
+}
+div.arrow-left-rocker, div.arrow-right-rocker{
+    top: 50%;
+    font-size: 40px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+div.arrow-left-rocker{
+    left: -30px;
+}
+div.arrow-right-rocker{
+    right: -30px;
+}
 
 /* INIZIO SESSIONE STARTED */
-
+h2.title-started{
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+a.button-started{
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: white;
+    padding: 10px 15px;
+    color:#296cf6;
+}
 
 /* INIZIO REGOLE FOOTER */
 
 footer{
     background-color: #091d4b;
     min-height: 300px;
+}
+/* regole logo e copy */
+div.container-logo-footer>img{
+    width: 15%;
+    margin-bottom: 10px;
+}
+div.container-logo-footer>p, i.far.fa-copyright{
+    color:#8e95a8;
+    font-size: 15px
+}
+div.container-logo-footer>span,
+li.link-colon-footer,
+li.link-colon-footer a{
+    color:#5a6783;
+    margin-bottom: 15px;
+}
+ul.link-logo-footer li.margin-logo-footer{
+    display: inline-block;
+    font-size: 20px;
+}
+i.fab{
+    color:#7c859b;
+    margin-left: 10px;
+}
+li.margin-logo-footer:first-child i.fab{
+    margin-left: 0;
+}
+/* regole colonne link footer */
+ul.container-link-colon-footer{
+    list-style: none;
+}
+h4.title-white-footer{
+    color:white;
+    font-size: 18px;
+    margin-bottom:10px;
+}
+li.link-colon-footer a{
+    text-decoration: none;
 }
