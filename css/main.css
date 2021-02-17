@@ -874,6 +874,9 @@ li.link-colon-footer a{
     div.container-logo-footer{
         margin-bottom: 10px;
     }
+    ul.link-logo-footer{
+        margin-bottom: 20px;
+    }
     h4.title-white-footer, li.link-colon-footer a{
         font-size: 18px;
     }
@@ -892,7 +895,7 @@ li.link-colon-footer a{
 }
 /* ________________________ */
 
-/* regole fixed */
+/* regole fixed bonus*/
 
 div.chat{
     position: fixed;
