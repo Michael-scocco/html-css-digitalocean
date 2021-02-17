@@ -20,7 +20,7 @@ header{
     top: 0;
     right: 0;
     left: 0;
-    z-index: 100px;
+    z-index: 100;
     background-color: white;
 }
 /* regole logo */
@@ -343,7 +343,7 @@ span.ancor-partners a, i.partners.fas.fa-angle-right{
 
     ul.link-partners-gray li {
     width: 40%;
-    width: calc((100% / 6)-5px);
+    width: calc((100% / 6) -5px );
     /*per dividere in spazi uguali reattivi,
     devo fare il calc, imoltre dato ke sono in "inline-block"
     tolgo un ipotetico margine del 5px, creato dalla stessa
@@ -630,7 +630,7 @@ div.reliable>img{
 }
 div.predicable>span a,
 div.world>span a,
-div.reliable>span a,{
+div.reliable>span a{
     text-decoration: none;
     color: #4a82f6;
 }
@@ -725,11 +725,10 @@ div.destination-right>a{
 i.12-reg.fas.fa-angle-right{
     color: #5ccbce;
 }
-/* do il paggind per allontanare il contenuto all'esterno */
-div.destination-right,
-div.destination-left{
+div.destination-right, div.destination-left{
     padding: 10px 15px;
 }
+/* do il paggind per allontanare il contenuto all'esterno */
 /* ________________________ */
 @media all and (max-width:767px) {
     /* CELLULARE */
@@ -862,12 +861,13 @@ h4.title-white-footer{
 li.link-colon-footer a{
     text-decoration: none;
 }
+
 @media all and (max-width:767px){
     h4.title-white-footer, li.link-colon-footer a{
         font-size: 25px;
     }
 }
-}
+
 @media all and (min-width:768px) and (max-width:991px) {
     /* TABLET */
     /* sessione FOOTER*/
@@ -881,7 +881,7 @@ li.link-colon-footer a{
         font-size: 18px;
     }
     div.chat{
-        bottom: 10;
+        bottom: 10px;
         left: 0;
     }
     div.figure {
